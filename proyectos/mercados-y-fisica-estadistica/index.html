@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercados financieros &amp; física estadística | Oscar Manuel Hernández</title>
+  <meta name="description" content="Un estudio de econofísica que conecta los datos del S&amp;P 500 con modelos de espines, transiciones de fase y simulaciones basadas en agentes.">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<main class="article-page">
+  <nav class="nav article-nav">
+    <a class="brand" href="../../index.html">OMH<span>.</span></a>
+    <div class="nav-actions">
+      <a class="back-link" href="../../index.html#proyectos">← Volver a proyectos</a>
+      <button class="translation-button" type="button" aria-label="Traducir esta página al inglés" title="Translate to English"><span aria-hidden="true">◎</span> ES / EN</button>
+    </div>
+  </nav>
+  <article class="project-article">
+    <p class="eyebrow">PROYECTO 02</p>
+    <h1>Mercados financieros &amp; física estadística</h1>
+    <p class="article-lead">Un estudio de econofísica que conecta los datos del S&amp;P 500 con modelos de espines, transiciones de fase y simulaciones basadas en agentes.</p>
+    <div class="article-tags"><span>Python</span><span>Econofísica</span><span>Modelo de Ising</span><span>S&amp;P 500</span><span>SciPy</span></div>
+    <figure class="project-figure">
+      <img src="../../images/market-log-returns.jpg" alt="Distribución de log-retornos del S&amp;P 500 comparada con ajustes gaussiano y t de Student">
+      <figcaption>Distribución de log-retornos del S&amp;P 500: la t de Student captura mejor las colas pesadas que el ajuste gaussiano.</figcaption>
+    </figure>
+    <div class="article-body">
+      <section>
+        <p class="article-kicker">CONTEXTO</p>
+        <p>Este Trabajo de Fin de Grado aborda los mercados financieros como sistemas complejos fuera del equilibrio. La idea central es trasladar una pregunta propia de la física estadística al mercado: cómo interacciones locales sencillas entre muchos agentes pueden generar observables macroscópicos complejos, como los precios y su volatilidad.</p>
+      </section>
+      <section>
+        <p class="article-kicker">EL RETO</p>
+        <p>Un movimiento browniano geométrico con retornos gaussianos e independientes no explica bien los datos reales. En el S&amp;P 500 aparecen colas pesadas, una autocorrelación lineal prácticamente nula en los retornos y, al mismo tiempo, agrupamiento de volatilidad: días agitados tienden a venir seguidos de otros días agitados. El reto fue contrastar estos hechos estilizados con modelos microscópicos sin perder el contacto con la evidencia empírica.</p>
+      </section>
+      <section>
+        <p class="article-kicker">ENFOQUE</p>
+        <p>Analicé aproximadamente 35 años de precios de cierre del S&amp;P 500, entre 1990 y 2025, mediante retornos logarítmicos, distribuciones empíricas y funciones de autocorrelación. Después implementé en Python modelos de agentes inspirados en Ising: el modelo de Ising-Bornholdt, con interacción local, realimentación global y ruido térmico, y una aproximación estocástica de campo medio. Las simulaciones permiten interpretar los regímenes de calma y turbulencia como una dinámica próxima a una transición de fase entre orden y desorden.</p>
+      </section>
+      <section>
+        <p class="article-kicker">RESULTADOS</p>
+        <p>Los datos confirman que una t de Student describe mejor las colas de los retornos que una gaussiana; el ajuste empírico de las colas dio un exponente cercano a −2,179. También observé persistencia en los retornos absolutos, con un decaimiento exponencial lento de la autocorrelación. El modelo de Ising-Bornholdt reprodujo conjuntamente los clústeres de volatilidad, las colas pesadas y la ausencia de autocorrelación apreciable en los retornos crudos. La aproximación de campo medio capturó parte de las colas pesadas, pero no reprodujo con la misma calidad la persistencia de la volatilidad: una limitación que muestra la importancia de la estructura espacial y las simulaciones numéricas.</p>
+      </section>
+      <section>
+        <p class="article-kicker">APRENDIZAJE</p>
+        <p>El proyecto me permitió trabajar de extremo a extremo: desde la limpieza y el análisis estadístico de datos financieros hasta la implementación de modelos estocásticos y la interpretación física de sus resultados. También consolidó mi interés por la ciencia de datos y por usar herramientas de sistemas complejos para estudiar fenómenos económicos emergentes.</p>
+      </section>
+    </div>
+    <a class="repo-link" href="https://github.com/volverman222/tfg-econofisica-mercados" target="_blank" rel="noreferrer">Ver repositorio en GitHub <span>↗</span></a>
+  </article>
+  <footer class="article-footer">
+    <span>© 2026 Oscar Manuel Hernández</span>
+    <a href="mailto:osmayo30@gmail.com">Contactar ↗</a>
+  </footer>
+</main>
+<script src="../../translate.js"></script>
+</body>
+</html>

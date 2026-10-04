@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLM Mini Lab | Oscar Manuel Hernández</title>
+  <meta name="description" content="Laboratorio personal para construir, entrenar y experimentar con modelos de lenguaje.">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<main class="article-page">
+  <nav class="nav article-nav">
+    <a class="brand" href="../../index.html">OMH<span>.</span></a>
+    <div class="nav-actions">
+      <a class="back-link" href="../../index.html#proyectos">← Volver a proyectos</a>
+      <button class="translation-button" type="button" aria-label="Traducir esta página al inglés" title="Translate to English"><span aria-hidden="true">◎</span> ES / EN</button>
+    </div>
+  </nav>
+  <article class="project-article">
+    <p class="eyebrow">PROYECTO 01</p>
+    <h1>LLM Mini Lab</h1>
+    <p class="article-lead">Laboratorio personal para construir, entrenar y experimentar con modelos de lenguaje.</p>
+    <div class="article-tags"><span>PyTorch</span><span>Transformers</span><span>LLMs</span></div>
+    <figure class="project-figure">
+      <img src="../../images/llm-training-loss.png" alt="Evolución de las pérdidas de entrenamiento y validación durante el preentrenamiento del modelo">
+      <figcaption>Curvas de pérdida de entrenamiento y validación durante el preentrenamiento: la pérdida desciende de forma sostenida a medida que el modelo procesa más tokens.</figcaption>
+    </figure>
+    <section class="code-example" aria-label="Ejemplo de uso de la API de OpenAI">
+      <p class="article-kicker">EJEMPLO RÁPIDO</p>
+<pre><code>from openai import OpenAI
+
+client = OpenAI()
+
+response = client.responses.create(
+    model="gpt-5",
+    input="Explica qué es un transformer."
+)
+
+print(response.output_text)</code></pre>
+    </section>
+    <div class="article-body">
+      <section>
+        <p class="article-kicker">CONTEXTO</p>
+        <p>LLM Mini Lab es un proyecto personal para comprender los modelos de lenguaje desde sus componentes fundamentales. El objetivo no es solo utilizar un modelo existente, sino reconstruir el proceso de entrenamiento y generación de un transformer pequeño.</p>
+      </section>
+      <section>
+        <p class="article-kicker">EL RETO</p>
+        <p>El reto es conectar una arquitectura transformer, el procesamiento de datos, un bucle de entrenamiento y la generación de texto en un flujo reproducible y medible.</p>
+      </section>
+      <section>
+        <p class="article-kicker">ENFOQUE</p>
+        <p>El repositorio implementa el preentrenamiento desde cero de un GPT-2 small de 124 millones de parámetros en PyTorch. Incluye atención causal multi-cabeza, LayerNorm, GELU, tokenización, entrenamiento con FineWeb-Edu y utilidades para generar texto con temperatura y top-k.</p>
+      </section>
+      <section>
+        <p class="article-kicker">APRENDIZAJE</p>
+        <p>Este trabajo me ha permitido profundizar en los detalles prácticos de los LLM: estabilidad del entrenamiento, interpretación de curvas de pérdida, coste computacional e inferencia eficiente.</p>
+      </section>
+    </div>
+    <a class="repo-link" href="https://github.com/volverman222/LLM_mini_lab" target="_blank" rel="noreferrer">Ver repositorio en GitHub <span>↗</span></a>
+  </article>
+  <footer class="article-footer">
+    <span>© 2026 Oscar Manuel Hernández</span>
+    <a href="mailto:osmayo30@gmail.com">Contactar ↗</a>
+  </footer>
+</main>
+<script src="../../translate.js"></script>
+</body>
+</html>
